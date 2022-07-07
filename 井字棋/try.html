@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/v2.6.10/vue.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				background-color: #aaffff;
+				position: relative;
+			}
+
+			.right {
+				width: 500px;
+				height: 500px;
+				background-color: #ccc;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+			}
+
+			.left {
+				width: 870px;
+				height: 650px;
+				background-color: #fff;
+				left: 600px;
+				top: 50px;
+				position: relative;
+			}
+
+			.box {
+				width: 500px;
+				height: 500px;
+				border: 1px solid #339a9a;
+				left: 20%;
+				top: 12%;
+				background-color: #fff;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.box div {
+				width: 32.9%;
+				height: 32.9%;
+				border: 1px solid #339a9a;
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="right">
+
+			</div>
+			<div class="left">
+				<div class="box">
+					<div v-for="(item,index) in count" :key="index" @click="display(index)">
+					
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		
+		var app = new Vue({
+			el: "#app",
+			data: {
+				count: 9, //格子数
+				click: [0, 0, 0, 0, 0, 0, 0, 0, 0], //判断每个格子是否被占用
+				currentIndex: 0, //当前点击的格子
+				player: 1, //当前玩家
+				p1: [0, 0, 0, 0, 0, 0, 0, 0, 0], //玩家1
+				p2: [0, 0, 0, 0, 0, 0, 0, 0, 0] //玩家2
+			},
+			methods: {
+				
+				display(index) {
+					
+					this.currentIndex = index;
+					//this.click[this.currentIndex]++
+					this.$set(this.click,this.currentIndex,this.click[this.currentIndex]+1)
+					
+					//alert(this.click[this.currentIndex]
+					
+					
+					if (this.click[this.currentIndex] % 2 == 1) { //判断格子是否被占用
+
+						//用player值区分玩家
+						
+						if (this.player == 2) {
+							
+							this.player = 1
+							//event.target.style.backgroundColor = "#ffaaff"
+							//this.p1[this.currentIndex]++ //在该玩家数组内标记
+							this.$set(this.p1,this.currentIndex,this.p1[this.currentIndex]+1)
+							this.win(this.p1, this.player)//判断该玩家是否获胜
+						
+						} 
+						
+						else {
+						
+							this.player = 2
+							//event.target.style.backgroundColor = "#aaaaff";
+							this.$set(this.p2,this.currentIndex,this.p2[this.currentIndex]+1)
+							this.win(this.p2, this.player)
+							
+						}
+						//event.target.style.borderRadius = "50%"
+						for(let i=0;i<9;i++){
+							if(this.p1[i]==1) {
+								
+							}
+						}
+					}
+					 
+					 else {
+						return
+					}
+					
+				},
+				win(p, player) {
+					
+					let i = 0
+					let flag = 0
+					
+					//斜
+					
+					if ((p[0] == 1 & p[4] == 1 & p[8] == 1) | (p[2] == 1 & p[4] == 1 & p[6] == 1)) {
+						flag = 1
+					} else {
+						for (i = 0; i < 3; i++) {
+							//竖
+							if (p[i] == 1 & p[i + 3] == 1 & p[i + 6] == 1) {
+								flag = 1
+							}
+							//横
+							else if (p[i * 3] == 1 & p[i * 3 + 1] == 1 & p[i * 3 + 2] == 1) {
+								flag = 1
+							}
+						}
+					}
+					if (flag == 1) {
+						alert('玩家' + player + 'win')
+						this.click=[0, 0, 0, 0, 0, 0, 0, 0, 0] //判断每个格子是否被占用
+						this.currentIndex=0,//当前点击的格子
+						this.player=1 //当前玩家
+						this.p1= [0, 0, 0, 0, 0, 0, 0, 0, 0] //玩家1
+						this.p2= [0, 0, 0, 0, 0, 0, 0, 0, 0] //玩家2
+						
+					} else return
+					
+				}
+			},
+			
+		})
+		
+	</script>
+</html>
