@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/v2.6.10/vue.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				background-color: #aaffff;
+				position: relative;
+			}
+
+			.right {
+				width: 500px;
+				height: 500px;
+				background-color: #ccc;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+			}
+
+			.left {
+				width: 870px;
+				height: 650px;
+				background-color: #fff;
+				left: 600px;
+				top: 50px;
+				position: relative;
+			}
+
+			.box {
+				width: 500px;
+				height: 500px;
+				border: 1px solid #339a9a;
+				left: 20%;
+				top: 12%;
+				background-color: #fff;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.box div {
+				width: 33.3%;
+				height: 33.3%;
+				border: 1px solid #339a9a;
+				background-color: #fff;
+				box-sizing: border-box;
+			}
+
+			.player1::after,
+			.player2::after {
+				content: "x";
+				font-size: 100px;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				line-height: 150px;
+				position: absolute;
+			}
+
+			.player2::after {
+				content: "o";
+			}
+
+			.box .end {
+				width: 500px;
+				height: 500px;
+				border: 1px solid #339a9a;
+				top: -100%;
+				background-color: #aaffff;
+				opacity: 0.8;
+				position: relative;
+				z-index: -1;
+			}
+
+			.box .end button {
+				width: 250px;
+				height: 80px;
+				font-size: 30px;
+				top: 46%;
+				left: 24.2%;
+			}
+			.box .end p{
+				width: 150px;
+				height: 100px;
+				top: 46%;
+				left: 35.2%;
+				font-size: 30px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="right">
+
+			</div>
+			<div class="left">
+				<div class="box">
+
+					<div v-for="(item,index) in click" :key="index" @click="display(index)"
+						:class="{player1:item==1,player2:item==2}">
+
+					</div>
+
+					<div class="end" v-if="win()" style="z-index:0">
+						<p>{{result}}</p>
+						<button @click="reset">重玩</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				click: [0, 0, 0, 0, 0, 0, 0, 0, 0], //格子是否被占 
+				step: 0, //步数
+				result:'' //结果
+			},
+			methods: {
+				display(index) {
+
+					//alert(index+','+this.click[index])
+					if (this.click[index] == 0) {
+						this.$set(this.click, index, this.step % 2 == 0 ? 1 : 2)
+						this.step++;
+					}
+
+				},
+				reset() {
+					this.click = [0, 0, 0, 0, 0, 0, 0, 0, 0] //格子是否被占
+					this.step = 0 //步数
+					this.result=''
+				},
+				win() {
+					let i = 0
+					let flag = 0
+					let t=0
+
+					//平局
+					for(i=0;i<9;i++){
+						if(this.click[i]==0){
+							t=1
+						}
+					}
+					if(t==0){
+						flag=3
+					}
+
+					//斜
+					if ((this.click[0] == 1 & this.click[4] == 1 & this.click[8] == 1) |
+						(this.click[2] == 1 & this.click[4] == 1 & this.click[6] == 1)) {
+						flag = 1
+					} else {
+						for (i = 0; i < 3; i++) {
+							//竖
+							if (this.click[i] == 1 & this.click[i + 3] == 1 & this.click[i + 6] == 1) {
+								flag = 1
+							}
+							//横
+							else if (this.click[i * 3] == 1 & this.click[i * 3 + 1] == 1 & this.click[i * 3 + 2] ==
+								1) {
+								flag = 1
+							}
+						}
+					}
+					//斜
+					if ((this.click[0] == 2 & this.click[4] == 2 & this.click[8] == 2) |
+						(this.click[2] == 2 & this.click[4] == 2 & this.click[6] == 2)) {
+						flag = 2
+					} else {
+						for (i = 0; i < 3; i++) {
+							//竖
+							if (this.click[i] == 2 & this.click[i + 3] == 2 & this.click[i + 6] == 2) {
+								flag = 2
+							}
+							//横
+							else if (this.click[i * 3] == 2 & this.click[i * 3 + 1] == 2 & this.click[i * 3 + 2] ==
+								2) {
+								flag = 2
+							}
+						}
+					}
+
+
+					if (flag == 1) {
+						//alert('1')
+						//this.reset()
+						this.result='玩家o 胜'
+					} else if (flag == 2) {
+						//alert('2')
+						//this.reset()
+						this.result='玩家x 胜'
+					} else if (flag == 3) {
+						this.result='平局'
+					} else return 0
+					return flag
+				}
+			}
+		})
+	</script>
+</html>

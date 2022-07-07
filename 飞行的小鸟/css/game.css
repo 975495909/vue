@@ -1,0 +1,116 @@
+/* 井号表示匹配id */
+#gamebox{
+    /* 宽度，快捷键w480，按tab */
+    width: 480px;
+    height: 640px;
+    /* 边框，bd */
+    border: 1px solid #000;
+    /* 背景图片 */
+    background-image: url(../images/background.png);
+    /* 子绝父相，por */
+    position: relative;
+    /* 居中 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+#land{
+    width: 480px;
+    height: 80px;
+    background-image: url(../images/ground.png);
+    /* 自由设置位置，绝对定位，poa */
+    position: absolute; 
+    left: 0;
+    bottom: 0;
+}
+#bird{
+    width: 57px;
+    height: 40px;
+    background-image: url(../images/bird.png);
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    /* 背景定位,决定是哪张小鸟 */
+    background-position: 0 0;
+    
+}
+
+/* 管子1的样式（管子1的开口朝上，就是下面的管子） */
+.pipe1 {
+/* 绝对定位 */
+position: absolute;
+/* 宽度 */
+width: 88px;
+/* 高度 */
+height: 100px;
+/* 背景图片 */
+background-image: url(../images/pipe1.png);
+}
+/* 管子2的样式（管子2的开口朝下，就是上面的管子） */
+.pipe2 {
+/* 绝对定位 */
+position: absolute;
+/* 宽度 */
+width: 88px;
+/* 高度 */
+height: 100px;
+/* 背景图片 */
+background-image: url(../images/pipe2.png);
+/* 背景定位，上面管子要取图片的底部区域，所以要加上background-position */
+background-position: bottom center;
+/* top值，即距离游戏盒子顶部的距离，上面管子这个值一定是0 */
+top: 0;
+}
+/* 遮罩盒子 */
+#cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: -webkit-radial-gradient(center center,rgba(168,168,168,0.253),rgb(230,230,230));
+    opacity:0;
+    transition: all .2s linear 0s;
+}
+
+/* 工具盒子默认是不能被看见的 */
+#tool{
+    display: none; 
+    width: 200px;
+    height: 250px;
+    top: 30%;
+    left: 30%;
+    position: absolute;
+}
+/* 分数 */
+#score{
+    width: 86px;
+    height: 114px;
+    position: absolute;
+    background-image: url(../images/score.png);
+    background-size: contain;
+    left: 45%;
+    top: 30%;
+    margin-left: -43px;
+    /* 设置堆叠顺序 */
+    z-index: 999; 
+}
+/* 重玩按钮 */
+#restart{
+    width: 107px;
+    height: 37.5px;
+    left: 18%;
+    top: 82%;
+    position: absolute;
+    /* 设置堆叠顺序 */
+    z-index: 999; 
+    /* 鼠标碰上去是小手 */
+    cursor:pointer;
+}
+/* logo */
+#logo{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    /* 设置堆叠顺序 */
+    z-index: 999; 
+}
