@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/purple_200"
+        >
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:id="@+id/day"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/weather"
+            android:paddingLeft="20dp"
+            android:background="@drawable/btn1"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#A769F3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:text="Chat"
+            android:textSize="28dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#A769F3"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:id="@+id/add_friend"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/add_friend"
+            android:paddingLeft="20dp"
+            android:background="@drawable/btn1"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friendView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="6.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#A769F3"
+                android:textStyle="bold"
+                android:id="@+id/btn_list"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/chat"
+                />
+
+            <Button
+                android:id="@+id/btn_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_200"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/me"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

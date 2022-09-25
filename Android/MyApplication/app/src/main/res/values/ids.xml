@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mod_item" type="id" />
+    <item name="add_item" type="id" />
+    <item name="btn2" type="id" />
+</resources>

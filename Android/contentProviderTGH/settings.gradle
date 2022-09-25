@@ -1,0 +1,2 @@
+rootProject.name = "contentProviderTGH"
+include ':app'

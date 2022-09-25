@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Chat</string>
+    <string name="login_title">用户登录</string>
+    <string name="reg">注册</string>
+    <string name="login_userid_hint">手机号码</string>
+    <string name="login_passwd_hint">密码(6~12)</string>
+    <string name="login">登录</string>
+    <string name="login_bottom">版权所有:19软工五班501 \n 联系电话：13713644116 \n Email：975495909@qq.com</string>
+
+    <string name="reg_title">用户注册</string>
+    <string name="username">用户名：</string>
+    <string name="reg_passwd">密码：</string>
+    <string name="reg_r_passwd">确认密码：</string>
+    <string name="reg_phone">手机号：</string>
+    <string name="reg_eamil">邮箱：</string>
+    <string name="sex">性别：</string>
+    <string name="sex_girl">女</string>
+    <string name="sex_boy">男</string>
+    <string name="reg_city">所在城市：</string>
+    <string name="reg_school">所在学校：</string>
+    <string name="reg_birdata">出生日期：</string>
+    <string name="reg_birtdata_btn">点击</string>
+
+    <string name="regsuccess">注册成功！</string>
+    <string name="back">返回</string>
+    <string name="friendname">好友名称</string>
+    <string name="pleasetext">请输入文本</string>
+    <string name="send">发送</string>
+    <string name="Orexit">是否要退出?</string>
+    <string name="yes">确定</string>
+    <string name="no">取消</string>
+    <string name="personal">个人信息</string>
+    <string name="exit">退出</string>
+
+    <string name="_6_12">(6~12)</string>
+    <string name="_10">(<![CDATA[<=10]]>)</string>
+    <string name="checkbox1">自动登录</string>
+    <string name="modify">修改</string>
+</resources>

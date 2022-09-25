@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UIActivity"
+    android:background="@drawable/bg4">
+    <!--<include layout="@layout/title"/>-->
+    <com.example.myapplication.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEeee"
+        android:text="注册界面"
+        android:textColor="#3F51B5"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="请输入用户名"
+        android:textColor="#AC9C"
+        android:id="@+id/edt_username"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="请输入密码"
+        android:textColor="#AC9C"
+        android:id="@+id/edt_passwd"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="请再次输入密码"
+        android:textColor="#AC9C"
+        android:id="@+id/edt_passwd2"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rg_sex"
+        android:textSize="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别："
+            android:textColor="#3F51B5"
+            android:textSize="20dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:textColor="#3F51B5"
+            android:id="@+id/rgbtn_boy"
+            android:textSize="20dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"
+            android:textColor="#3F51B5"
+            android:id="@+id/rgbtn_girl"
+            android:textSize="20dp"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮箱："
+            android:textColor="#3F51B5"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:ems="18"
+            android:inputType="textEmailAddress"
+            android:maxLines="2"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_email"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所在城市："
+            android:textColor="#3F51B5"
+            android:textSize="20dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_city"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所在学校："
+            android:textColor="#3F51B5"
+            android:textSize="20dp"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/edt_school"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:id="@+id/btn_signup"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/right"
+            android:textSize="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除"
+            android:id="@+id/btn_clear"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/error"
+            android:textSize="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:onClick="onClickLogin"
+            android:id="@+id/btn_login"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/right"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeee1"
+        android:text="版权所有:广东东软学院软件工程系所有
+                    \n 广东东软学院网址：https://www.nuit.edu.cn
+                    \n 联系电话：18988888888
+                    \n email：tgh@qq.com"
+        android:autoLink="web|phone|email"
+        android:padding="10dp"
+        android:drawableStart="@drawable/logob"/>
+
+</LinearLayout>

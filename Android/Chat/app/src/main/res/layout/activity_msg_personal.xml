@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/purple_200">
+
+        <Button
+            android:layout_width="105dp"
+            android:layout_height="60dp"
+            android:id="@+id/user_back"
+            android:text="@string/back"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/back"
+            android:paddingRight="20dp"
+            android:background="@drawable/btn1"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#A769F3"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:text="@string/personal"
+            android:textSize="28dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginRight="80dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:id="@+id/userimg1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textColor="#555555"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_phone"
+                android:textColor="#555555"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_eamil"
+                android:textColor="#555555"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sex"
+                android:textColor="#555555"
+                android:textSize="24dp"
+                />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="#555555"
+                android:textSize="24dp"
+                android:id="@+id/sex"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_city"
+                android:textColor="#555555"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/city"
+                android:textSize="24dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_school"
+                android:textColor="#555555"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/school"
+                android:textSize="24dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_birdata"
+                android:textColor="#555555"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/birdata"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:text="@string/modify"
+            android:textColor="@color/white"
+            android:id="@+id/btn_reg"
+            android:textSize="24dp"
+            android:layout_margin="25dp"
+            android:background="@drawable/btn2"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

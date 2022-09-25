@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Chat</string>
+  <string name="login_title">User login</string>
+  <string name="reg">register</string>
+  <string name="login_userid_hint">phone number</string>
+  <string name="login_passwd_hint">Password (6~12)</string>
+  <string name="login">Sign in</string>
+  <string name="login_bottom">Copyright: 501, the fifth shift of 19 Software Engineer \ n Tel.: 13713644116 \ n email: 975495909@qq.com</string>
+  <string name="reg_title">User registration</string>
+  <string name="username">user name:</string>
+  <string name="reg_passwd">password:</string>
+  <string name="reg_r_passwd">Confirm password:</string>
+  <string name="reg_phone">cell-phone number:</string>
+  <string name="reg_eamil">Email:</string>
+  <string name="sex">Gender:</string>
+  <string name="sex_girl">female</string>
+  <string name="sex_boy">male</string>
+  <string name="reg_city">City:</string>
+  <string name="reg_school">School:</string>
+  <string name="reg_birdata">date of birth:</string>
+  <string name="reg_birtdata_btn">click</string>
+  <string name="regsuccess">Registration succeeded!</string>
+  <string name="back">return</string>
+  <string name="friendname">Friend name</string>
+  <string name="pleasetext">Please enter text</string>
+  <string name="send">send out</string>
+  <string name="Orexit">Do you want to exit?</string>
+  <string name="yes">determine</string>
+  <string name="no">cancel</string>
+  <string name="personal">personal information</string>
+  <string name="exit">sign out</string>
+
+  <string name="_6_12">(6~12)</string>
+  <string name="_10">(<![CDATA[<=10]]>)</string>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/purple_200">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:textSize="28dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="120dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#A769F3"/>
+
+        <Button
+            android:layout_width="105dp"
+            android:layout_height="60dp"
+            android:id="@+id/reg"
+            android:text="@string/reg"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/next"
+            android:background="@drawable/btn1"
+            android:paddingLeft="20dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/log"
+            android:paddingRight="10dp"/>
+
+        <EditText
+            android:id="@+id/userid"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_userid_hint"
+            android:inputType="phone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/passwd" />
+
+        <EditText
+            android:id="@+id/passwd"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/login_passwd_hint"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox1"
+            android:id="@+id/btn_autologin"
+            android:textSize="18dp"
+            android:textColor="#555555"
+            android:layout_marginLeft="100dp"/>
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:text="@string/login"
+            android:id="@+id/btn_login"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn2"
+            android:layout_marginTop="50dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DAF3ECFB"
+        android:text="@string/login_bottom"
+        android:autoLink="phone|email"
+        android:padding="10dp"
+        android:gravity="center_horizontal"/>
+
+</LinearLayout>
