@@ -1,0 +1,29 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password:
+  servlet:
+    multipart:
+    # maxFileSize 单个数据大小
+    maxFileSize: 10MB
+    # maxRequestSize 是总数据大小
+    maxRequestSize: 100MB
+  devtools:
+    restart:
+      #热加载生效
+      enabled: false
+      #额外新增的热加载目录
+#      additional-paths: src/main/java,src/main/resource/static
+      #热加载排除目录exclude:
+      #单个文件执行trigger-file:
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+

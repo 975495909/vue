@@ -1,0 +1,120 @@
+.el-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+::v-deep .head .el-button [class*=el-icon] {
+    height: 2em;
+    width: 2em;
+}
+
+::v-deep .head .el-button [class*=el-icon] svg {
+    font-size: 15px;
+}
+
+.el-header .head {
+    display: flex;
+    flex-direction: row;
+}
+
+.el-header .head .inpSearch {
+    width: 40%;
+    height: 100%;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+
+.el-header .head .date {
+    margin-right: 30px;
+}
+
+.el-header .el-button {
+    height: 40px;
+    width: 10%;
+    margin-right: 20px;
+}
+
+.el-header .el-dialog .el-input {
+    width: 50%;
+}
+
+.el-textarea {
+    width: 50%;
+}
+
+.el-main .el-table {
+    height: 58vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.avatar-uploader .el-upload {
+    border: 1px dashed var(--el-border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--el-transition-duration-fast);
+}
+
+.avatar-uploader .el-upload:hover {
+    border-color: var(--el-color-primary);
+}
+
+.el-icon.avatar-uploader-icon {
+    width: 178px;
+    height: 178px;
+    border: 1px solid var(--el-input-border-color, var(--el-border-color));
+    position: relative;
+}
+
+.el-icon.avatar-uploader-plus {
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+::v-deep .el-table .el-button [class*=el-icon] {
+    height: 2em;
+    width: 2em;
+}
+
+::v-deep .btnEsit [class*=el-icon] svg {
+    color: #4c8393;
+    font-size: 20px;
+}
+
+::v-deep .btnEsit [class*=el-icon] svg:hover {
+    color: #76d0e8;
+}
+
+::v-deep .btnEsit [class*=el-icon] svg:active {
+    color: #243e46;
+}
+
+::v-deep .btnDel [class*=el-icon] svg {
+    color: #9f485c;
+    font-size: 20px;
+}
+
+::v-deep .btnDel [class*=el-icon] svg:hover {
+    color: #e56785;
+}
+
+::v-deep .btnDel [class*=el-icon] svg:active {
+    color: #7a3746;
+}
+
+.el-footer .el-pagination {
+    padding-left: 63%;
+}
+

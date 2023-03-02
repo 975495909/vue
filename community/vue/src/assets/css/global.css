@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+:root {
+    --el-color-primary-dark-2:#877fa6;
+    --el-color-primary: #a59acb;
+    --el-color-primary-light-3: #c8c1e2;
+    --el-color-primary-light-5: #d4cdf0;
+    --el-color-primary-light-9: #f3efff;
+}
+ .el-input__inner{
+    color: var(--el-color-primary-dark-2);
+    --el-input-inner-height: calc(var(--el-input-height, 32px) - -5px);
+}
